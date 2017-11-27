@@ -17,19 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 */
-
+/*
 Route::group(['middleware' => ['jwt.auth']], function () {
 
 	Route::group(['middleware' => ['cors']], function () {
 
-		//Route::resource('user','UsersController',['except'=>['create','edit']]);
+		Route::resource('user','UsersController',['except'=>['create','edit']]);
 
-		//Route::resource('noticia','NoticiaController',['except'=>['create','edit']]);
+		Route::resource('noticia','NoticiaController',['except'=>['create','edit']]);
 
-		//Route::resource('categoria','CategoriaController',['except'=>['create','edit']]);
+		Route::resource('categoria','CategoriaController',['except'=>['create','edit']]);
 	});	
 
 });
+*/
 
 Route::group(['middleware' => ['cors']], function () {
 

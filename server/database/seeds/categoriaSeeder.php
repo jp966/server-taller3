@@ -20,5 +20,10 @@ class categoriaSeeder extends Seeder
 
         	'descripcion' => 'Tenis',
         ]);
+
+         DB::table('categoria')->insert([
+
+            'descripcion' => 'Boxeo',
+        ]);
     }
 }
